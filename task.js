@@ -9,4 +9,5 @@ const expensiveCalculation = () => {
 process.on('message', payload => {
 	const sum = expensiveCalculation()
 	process.send(sum)
+	process.exit()
 })
